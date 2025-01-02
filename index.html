@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+/* 全域樣式 */
+body {
+  background-color: DeepSkyBlue;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  background-color: #FFFFFF;
+  margin: 10px;
+  padding: 10px;
+  max-width: 1200px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* #9ACD32 區塊 */
+.green-block {
+  background-color: #9ACD32;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+/* #00CED1 區塊 */
+.blue-blocks {
+  display: flex;
+  flex-direction: row; /* 預設為水平排列 */
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+  width: 100%; /* 確保佔滿父容器寬度 */
+}
+
+.blue-block {
+  background-color: #00CED1;
+  flex: 1 1 auto; /* 自動調整寬度 */
+  height: 100px;
+  display: block; /* 確保可見 */
+}
+
+/* #DCDCDC 區塊 */
+.gray-blocks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.gray-block {
+  background-color: #DCDCDC;
+  flex: 1 1 calc(25% - 20px); /* 預設為四列排列 */
+  height: 100px;
+}
+
+/* 響應式設計 */
+@media screen and (max-width: 480px) {
+  .blue-blocks {
+    flex-direction: column; /* 小於 480px 時改為垂直排列 */
+  }
+
+  .gray-block {
+    flex: 1 1 calc(50% - 10px); /* 灰色區塊改為 2x2 排列 */
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <!-- 綠色區塊 -->
+  <div class="green-block"></div>
+  
+  <!-- 藍色區塊 -->
+  <div class="blue-blocks">
+    <div class="blue-block"></div>
+    <div class="blue-block"></div>
+    <div class="blue-block"></div>
+  </div>
+  
+  <!-- 灰色區塊 -->
+  <div class="gray-blocks">
+    <div class="gray-block"></div>
+    <div class="gray-block"></div>
+    <div class="gray-block"></div>
+    <div class="gray-block"></div>
+  </div>
+</div>
+
+</body>
+</html>
